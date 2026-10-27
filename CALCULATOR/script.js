@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const calculatorTable = document.getElementById('calculator');
-    // İsmini 'result' yerine 'display' yaptık ki hesaplama sonucu olan 'result' ile karışmasın
+    
     const display = document.getElementById('result'); 
 
     if (!calculatorTable || !display) {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     calculatorTable.addEventListener('click', (event) => {
         const cell = event.target.closest('td');
-        // Eğer hücre yoksa veya en üstteki ekran hücremizse tıklamayı görmezden gel
+        
         if (!cell || cell.id === 'result') return;
 
         const value = cell.textContent.trim();
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                // Hesaplamayı yapıp doğrudan 'result' isimli sayısal değişkene aktarıyoruz
+                
                 const result = eval(currentExpression);
                 
-                // Ekrana yazdırıyoruz
+             
                 display.textContent = result;
                 
-                // Hafızayı güncelliyoruz
+               
                 currentExpression = result.toString();
             } catch (error) {
                 display.textContent = "Error";
