@@ -1,0 +1,12 @@
+
+
+#calculator .numberbcolor{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#calculator .numberbcolor:hover{
+    background-color: aqua;
+    cursor: pointer;
+    transition: 0.5s;
+}
